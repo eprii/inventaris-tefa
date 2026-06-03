@@ -111,7 +111,7 @@ select:focus {
 
 .btn-secondary {
     background-color: #64748b;
-    color: white;
+    color: red;
 }
 
 .btn-warning {
