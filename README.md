@@ -6,7 +6,7 @@ Aplikasi web inventaris dan peminjaman barang Lab TEFA berbasis Laravel.
 
 - Login, register, dan logout
 - Dashboard statistik
-- View data peminjam dari seeder
+- View data peminjam
 - CRUD barang
 - CRUD peminjaman
 - Pengurangan stok otomatis saat peminjaman dibuat
