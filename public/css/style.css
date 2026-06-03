@@ -1,0 +1,837 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.container {
+    width: 78%;
+    margin: 32px auto;
+}
+
+.card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #d8e0ea;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #d9e7f5;
+    border: 1px solid white;
+}
+
+th {
+    background-color: #4f86c6;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #c9dcef;
+    color: #111827;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: white;
+    color: #111827;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-small {
+    padding: 7px 10px;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc2626;
+    color: white;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.alert-success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.alert-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pagination-wrapper {
+    margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 92%;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+
+:root {
+    --nav-bg: #14532d;
+    --nav-bg-dark: #0f3f23;
+    --nav-button: rgba(255, 255, 255, 0.10);
+    --nav-border: rgba(255, 255, 255, 0.22);
+}
+
+.app-navbar {
+    background-color: var(--nav-bg);
+    padding: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.nav-container {
+    width: 78%;
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-brand {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 24px;
+    white-space: nowrap;
+}
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 9px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: var(--nav-button);
+    border: 1px solid var(--nav-border);
+    box-sizing: border-box;
+}
+
+.nav-button:hover,
+.nav-button.active {
+    background-color: var(--nav-bg-dark);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.nav-divider {
+    width: 1px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.45);
+    margin: 0 6px;
+}
+
+.logout-form {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logout-button {
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 9px;
+    border: 1px solid #dc2626;
+    background-color: #dc2626;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        width: 92%;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .nav-left {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .nav-right {
+        width: 100%;
+    }
+
+    .nav-brand {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .nav-divider {
+        display: none;
+    }
+}
+
+.page-subtitle {
+    margin-top: 6px;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.tefa-navbar {
+    width: 100%;
+    background-color: #064e3b;
+    min-height: 72px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+}
+
+.tefa-navbar-wrapper {
+    width: 78%;
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tefa-navbar-left,
+.tefa-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tefa-brand {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 24px;
+    white-space: nowrap;
+}
+
+.tefa-nav-link {
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-sizing: border-box;
+}
+
+.tefa-nav-link:hover,
+.tefa-nav-link.active {
+    background-color: #022c22;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.tefa-divider {
+    width: 1px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.45);
+    margin: 0 6px;
+}
+
+.tefa-logout-form {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tefa-logout-button {
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 9px;
+    border: 1px solid #dc2626;
+    background-color: #dc2626;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tefa-logout-button:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+    .tefa-navbar-wrapper {
+        width: 92%;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .tefa-navbar-left {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .tefa-navbar-right {
+        width: 100%;
+    }
+
+    .tefa-brand {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .tefa-divider {
+        display: none;
+    }
+}
+
+table th {
+    height: 30px;
+    vertical-align: middle;
+}
+
+table td {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.col-aksi-peminjaman {
+    width: 165px;
+    min-width: 165px;
+}
+
+.action-nowrap {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+
+
+
+
+/* =========================
+   SIMPLE BLUE UI PALETTE
+   ========================= */
+
+:root {
+    --primary-blue: #2563eb;
+    --primary-blue-dark: #1d4ed8;
+    --primary-blue-soft: #dbeafe;
+
+    --nav-blue: #1e3a8a;
+    --nav-blue-dark: #172554;
+
+    --table-head: #4f86c6;
+    --table-body: #c9dcef;
+
+    --border-soft: #d8e0ea;
+    --bg-page: #f3f6fb;
+    --text-main: #111827;
+
+    --yellow: #f59e0b;
+    --green: #16a34a;
+    --red: #dc2626;
+    --gray: #64748b;
+}
+
+/* Body */
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+}
+
+/* Card */
+.card {
+    background-color: white;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.tefa-navbar {
+    width: 100%;
+    background-color: var(--nav-blue);
+    min-height: 72px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.18);
+}
+
+.tefa-navbar-wrapper {
+    width: 78%;
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tefa-navbar-left,
+.tefa-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tefa-brand {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 24px;
+    white-space: nowrap;
+}
+
+.tefa-nav-link {
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-sizing: border-box;
+}
+
+.tefa-nav-link:hover,
+.tefa-nav-link.active {
+    background-color: var(--nav-blue-dark);
+    border-color: rgba(255, 255, 255, 0.38);
+}
+
+.tefa-divider {
+    width: 1px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.45);
+    margin: 0 6px;
+}
+
+.tefa-logout-form {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tefa-logout-button {
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 9px;
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tefa-logout-button:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: var(--table-body);
+    border: 1px solid white;
+}
+
+th {
+    background-color: var(--table-head);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid white;
+    font-weight: bold;
+    height: 42px;
+    vertical-align: middle;
+}
+
+td {
+    background-color: var(--table-body);
+    color: var(--text-main);
+    padding: 10px;
+    border: 2px solid white;
+    height: 56px;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 9px 13px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.btn-small {
+    padding: 7px 10px;
+}
+
+/* Tombol utama: Tambah, Simpan, Update */
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-blue-dark);
+    border-color: var(--primary-blue-dark);
+}
+
+/* Tombol kembali */
+.btn-secondary {
+    background-color: white;
+    color: var(--gray);
+    border-color: var(--gray);
+}
+
+.btn-secondary:hover {
+    background-color: #f1f5f9;
+}
+
+/* Tombol edit: outline kuning */
+.btn-warning {
+    background-color: white;
+    color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.btn-warning:hover {
+    background-color: #fef3c7;
+}
+
+/* Tombol kembalikan: outline hijau */
+.btn-success {
+    background-color: white;
+    color: var(--green);
+    border-color: var(--green);
+}
+
+.btn-success:hover {
+    background-color: #dcfce7;
+}
+
+/* Tombol hapus: full merah */
+.btn-danger {
+    background-color: var(--red);
+    color: white;
+    border-color: var(--red);
+}
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+/* Tombol aksi agar sejajar */
+.action-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.action-nowrap {
+    flex-wrap: nowrap;
+}
+
+.action-nowrap .btn {
+    white-space: nowrap;
+}
+
+/* =========================
+   FORM
+   ========================= */
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: white;
+    color: var(--text-main);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* =========================
+   STATUS BADGE
+   ========================= */
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status-dipinjam {
+    background-color: var(--primary-blue-soft);
+    color: #1e40af;
+}
+
+.status-dikembalikan {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.status-terlambat {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+    .tefa-navbar-wrapper {
+        width: 92%;
+        padding: 14px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .tefa-navbar-left {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .tefa-navbar-right {
+        width: 100%;
+    }
+
+    .tefa-brand {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .tefa-divider {
+        display: none;
+    }
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.stat-card {
+    background-color: #f8fbff;
+    border: 1px solid #d8e0cb;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.stat-card p {
+    margin: 0;
+    color: #475569;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.stat-card h2 {
+    margin: 10px 0 0;
+    font-size: 34px;
+    color: #1e40af;
+}
+
+.dashboard-actions {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-pdf {
+    background-color: white;
+    color: #dc2626;
+    border-color: #dc2626;
+}
+
+.btn-pdf:hover {
+    background-color: #fee2e2;
+}
+
+.btn-excel {
+    background-color: white;
+    color: #16a34a;
+    border-color: #16a34a;
+}
+
+.btn-excel:hover {
+    background-color: #dcfce7;
+}
