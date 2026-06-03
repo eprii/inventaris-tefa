@@ -110,8 +110,15 @@ select:focus {
 }
 
 .btn-secondary {
-    background-color: #64748b;
-    color: red;
+    background-color: white;
+    color: #2563eb;
+    border-color: #1d4ed8;
+}
+
+.btn-secondary:hover {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    border-color: #1d4ed8;
 }
 
 .btn-warning {
